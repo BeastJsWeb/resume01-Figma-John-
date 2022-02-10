@@ -1,5 +1,111 @@
-.header {
+.header { // верстка шапки
     &__content {
-        max-width: 1032px;
+        max-width: 1152px;
+    }
+    &__menu {
+        display: flex;
+        justify-content: flex-end;
+        height: 82px;
+        align-items: center;
+        padding-right: 60px;
+        @media (max-width: $md3) {
+            height: 50px;
+            padding: 10px;
+        }
     }
 }
+
+.menu {
+    &__body { // развернутое меню на мобилке
+        @media (max-width: $md3) {
+            transform: translate(0px, -100%);
+            transition: transform 0.5s ease 0s;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            padding-top: 60px;
+            padding-bottom: 190px;
+            overflow: auto;
+            background-color: rgb(255, 255, 255, 0.8); // 0.8 - прозрачность 
+            li {
+                padding-top: 40px;
+            }  // JS переключатель меню
+            &.--active {
+                transform: translate(0px, 0%);
+            }   
+        }
+    }
+    &__list {
+       @media (min-width: $md3) {
+            display: flex;
+        }
+       @media (max-width: $md3) {
+            display: block;
+        }
+    }  // кликабельные пункты меню
+    &__link {
+        font-size: 20px;
+        font-weight: 500;
+        color: #000000;
+        padding-left: 33px;
+        transition: all 0.3s;
+        @media (min-width: $md1) {
+            &:hover {
+                color: #FF6464;
+            }
+        }
+        @media (max-width: $md3) {
+            font-size: 40px;
+            display: block;
+            text-align: center;
+            padding-left: 0px;
+            
+        }
+    }  
+}
+
+// меню бургер
+.icon-menu {
+    display: none;
+    @media (max-width: $md3) {
+            z-index: 5;
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 18px;
+            cursor: pointer;
+        
+        span {
+            transition: all 0.3s ease 0s;
+            top: calc(50% - 1px);
+            left: 0px;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #000;
+            &:first-child {
+                top: 0px;
+            }
+            &:last-child {
+                top: auto;
+                bottom: 0px;
+            }
+        }
+        &.--active {
+            span {
+                transform: scale(0);
+                &:first-child {
+                    transform: rotate(-45deg);
+                    top: calc(50% - 1px);
+                }
+                &:last-child {
+                    transform: rotate(45deg);
+                    bottom: calc(50% - 1px);
+                }
+            }
+        }
+    }
+}
+// меню бургер //
