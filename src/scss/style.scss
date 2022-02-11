@@ -8,7 +8,7 @@ $fontFamily: "Heebo";
 // переменные
 $minWidth: 320px;
 $maxWidth: 1152;
-$maxWidthContainer: 856;
+$maxWidthContainer: 1152;
 $md1: $maxWidthContainer +12px;
 $md2: 991.98px;
 $md3: 767.98px;
@@ -19,7 +19,7 @@ $md4: 479.98px;
 @import "null";
 body {
   font-size: 16px;
-  color: #000;
+  color: #21243D;
   font-family: $fontFamily;
   &._lock {
     overflow: hidden;
@@ -41,14 +41,15 @@ body {
 .__container {
   max-width: $maxWidthContainer + px;
   margin: 0 auto;
+  background-color: silver;
   @media (max-width: $md1) {
-    max-width: 970px;
+   // max-width: 970px;
   }
   @media (max-width: $md2) {
-    max-width: 750px;
+   // max-width: 750px;
   }
   @media (max-width: $md3) {
-    max-width: none;
+   // max-width: none;
   }
 }
 // основная сетка //
@@ -56,3 +57,32 @@ body {
 // header
 @import "header";
 // header //
+
+// main
+//home (1st page)
+@import "home";
+//home (1st page)
+// main //
+
+// main (основной блок)
+
+// заголовки 1-го порядка
+.title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 60px;
+  @media (max-width: $md1) {
+    font-weight: 700;
+    font-size: 30px;
+  }
+}
+// заголовки 2-го порядка
+.title-2 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 44.06px;
+  @media (max-width: $md1) {
+    font-weight: 700;
+    font-size: 30px;
+  }
+}

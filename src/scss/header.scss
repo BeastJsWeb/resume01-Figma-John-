@@ -1,19 +1,17 @@
 .header { // верстка шапки
-    &__content {
-        max-width: 1152px;
-    }
+    background-color: silver;
     &__menu {
         display: flex;
         justify-content: flex-end;
-        height: 82px;
+        height: 87px;
         align-items: center;
         padding-right: 60px;
         @media (max-width: $md3) {
             height: 50px;
-            padding: 10px;
+            padding-right: 20px;
         }
     }
-}
+}   
 
 .menu {
     &__body { // развернутое меню на мобилке
@@ -28,9 +26,9 @@
             padding-top: 60px;
             padding-bottom: 190px;
             overflow: auto;
-            background-color: rgb(255, 255, 255, 0.8); // 0.8 - прозрачность 
+            background-color: rgb(255, 255, 255, 0.9); // 0.8 - прозрачность 
             li {
-                padding-top: 40px;
+                padding: 10%;
             }  // JS переключатель меню
             &.--active {
                 transform: translate(0px, 0%);
@@ -92,7 +90,7 @@
                 top: auto;
                 bottom: 0px;
             }
-        }
+        }  // анимация кнопки вкл/выкл
         &.--active {
             span {
                 transform: scale(0);
