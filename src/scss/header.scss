@@ -1,5 +1,4 @@
 .header { // верстка шапки
-    background-color: silver;
     &__menu {
         display: flex;
         justify-content: flex-end;
@@ -49,7 +48,7 @@
         color: #000000;
         padding-left: 33px;
         transition: all 0.3s;
-        @media (min-width: $md1) {
+        @media (min-width: $md2) {
             &:hover {
                 color: #FF6464;
             }
