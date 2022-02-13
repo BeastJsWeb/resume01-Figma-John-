@@ -55,6 +55,7 @@
         }
         @media (max-width: $md3) {
             font-size: 40px;
+            font-weight: 700;
             display: block;
             text-align: center;
             padding-left: 0px;
@@ -91,6 +92,7 @@
             }
         }  // анимация кнопки вкл/выкл
         &.--active {
+            position: fixed;
             span {
                 transform: scale(0);
                 &:first-child {

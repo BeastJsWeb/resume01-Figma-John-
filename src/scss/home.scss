@@ -130,6 +130,7 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 38.2px;
+  transition: color 0.3s;
   @media (min-width: $md2) {
     cursor: pointer;
     &:hover {
@@ -171,9 +172,9 @@
 .content__featured-works {
   max-width: $md1;
   margin: 0 auto;
-  padding: 0px 150px 80px 150px;
+  padding: 0px 150px 83px 150px;
   @media (max-width: $md3) {
-    padding: 0 0 0 0;
+    padding: 0 0 150px 0;
   }
   >div:nth-child(1) {
     font-size: 22px;
@@ -193,16 +194,7 @@
       display: flex;
       overflow: auto;
     }
-    >div:nth-child(odd) { // 1-й контент контейнер
-      border-bottom: 1px solid #E0E0E0;
-      margin: 0 0 15px 0;
-      padding: 0px 40px 25px 0;
-      @media (max-width: $md3) {
-        padding: 0 20px 25px 20px;
-        flex: 0 0 90%;
-      }
-    }
-    >div:nth-child(even) { // 2-й контент контейнер
+    >div:nth-child(odd), >div:nth-child(even) { // 1-й контент контейнер
       border-bottom: 1px solid #E0E0E0;
       margin: 0 0 15px 0;
       padding: 0px 40px 25px 0;
@@ -219,9 +211,17 @@
       div {
         flex-direction: column;
         &:nth-child(1) { // заголовки блоков с картинками
+          display: inline-flex;
           font-size: 30px;
           font-weight: 700;
           line-height: 44px;
+          transition: color 0.3s;
+          @media (min-width: $md2) {
+            &:hover {
+              color: #FF6464;
+              cursor: pointer;
+            }
+          }
           @media (max-width: $md2) {
             font-size: 24px;
             line-height: 30px;

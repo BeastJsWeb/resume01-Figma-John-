@@ -1,0 +1,29 @@
+.footer {
+  text-align: center;
+  padding-top: 50px;
+  &__content {
+    >div:nth-child(1) { // иконки соц сетей
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 26px;
+      gap: 35px;
+      a {
+       font-size: 30px;
+       color: #21243D;
+       transition: all 0.3s;
+       @media (min-width: $md2) {
+          &:hover {
+            color: #FF6464;
+            cursor: pointer;
+          }
+        }
+      }
+    }  
+    >div:nth-child(2) { // текст на последней строке
+      font-size: 14px;
+      line-height: 21px;
+      padding-bottom: 55px;
+    }
+  }
+}
