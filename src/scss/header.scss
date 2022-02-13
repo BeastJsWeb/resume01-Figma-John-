@@ -48,6 +48,9 @@
         color: #000000;
         padding-left: 33px;
         transition: all 0.3s;
+        &.--active {
+            color: #FF6464;
+        }  
         @media (min-width: $md2) {
             &:hover {
                 color: #FF6464;

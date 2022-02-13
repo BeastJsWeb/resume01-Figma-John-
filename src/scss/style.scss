@@ -59,9 +59,14 @@ body {
 // header //
 
 // main
-//home (1st page)
+//home (1)
 @import "home";
-//home (1st page)
+//blog (2)
+@import "blog";
+//works (3)
+
+//work detail (4)
+
 // main //
 
 // footer
@@ -79,13 +84,13 @@ body {
     font-size: 30px;
   }
 }
-// заголовки 2-го порядка
+// заголовки 2-го порядка (используется: blog)
 .title-2 {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 30px;
-  line-height: 44.06px;
-  @media (max-width: $md1) {
-    font-weight: 700;
-    font-size: 30px;
+  line-height: 44px;
+  @media (max-width: $md2) {
+    font-size: 26px;
+    line-height: 38px;
   }
 }
