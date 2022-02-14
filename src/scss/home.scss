@@ -57,6 +57,8 @@
   img {
     border-radius: 50%;
     box-shadow: -5px 13px 0 0 #EDF7FA;
+    width: 243px;
+    height: 243px;
     @media(max-width: $md4) {
       width: 170px;
       height: 170px;
@@ -91,7 +93,7 @@
   >div {
     display: inline-flex;
   }
-  >div:nth-child(1) {
+  >div:nth-child(1) {  
     justify-content: space-between;
     line-height: 70px;
     div {
@@ -194,7 +196,7 @@
       display: flex;
       overflow: auto;
     }
-    >div:nth-child(odd), >div:nth-child(even) { // 1-й контент контейнер
+    >div {                      // 1-4 контент контейнеры
       border-bottom: 1px solid #E0E0E0;
       margin: 0 0 15px 0;
       padding: 0px 40px 25px 0;
@@ -210,7 +212,8 @@
       }
       div {
         flex-direction: column;
-        &:nth-child(1) { // заголовки блоков с картинками
+        a { // заголовки блоков с картинками
+          color: #21243D;
           display: inline-flex;
           font-size: 30px;
           font-weight: 700;
@@ -219,7 +222,6 @@
           @media (min-width: $md2) {
             &:hover {
               color: #FF6464;
-              cursor: pointer;
             }
           }
           @media (max-width: $md2) {
@@ -251,17 +253,28 @@
           }
         }
       }
-      img { // картинки блоков
-        padding: 10px 20px 0px 0;
-        @media (max-width: $md2) {
-          padding-top: 5px;
-        }
-        @media (max-width: $md3) {
-          height: 100%;
-          width: 100%;
-          padding: 0px 0 10px 0;
-        }
-      }
+    }
+  }
+}
+.works__img { // картинки блоков
+  padding: 10px 20px 0px 0;
+  @media (max-width: $md2) {
+    padding-top: 5px;
+  }
+  @media (max-width: $md3) {
+    padding: 0px 0 10px 0;
+  }
+  img { // картинки блоков
+    height: 100%;
+    flex: 0 0;
+    border-radius: 6px;
+    max-width: 246px;
+    max-height: 180px;
+    object-fit: cover;
+    @media (max-width: $md3) {
+      max-width: none;
+      max-height: none;
+      width: 100%;
     }
   }
 }

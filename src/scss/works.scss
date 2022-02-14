@@ -1,0 +1,52 @@
+.page__works {
+  padding: 60px 0 0 0;
+  @media (max-width: $md3) {
+    padding: 20px 0 0 0;
+  }
+  >div:nth-child(1) {
+    padding-bottom: 45px;
+    @media (max-width: $md3) {
+      padding-bottom: 0px;
+      margin-bottom: 0;
+    }
+    >div:nth-child(1) {
+      @media (max-width: $md3) {
+        text-align: left;
+        padding-left: 20px;
+        padding-bottom: 10px;
+      }
+      >span {            // заголовок страницы
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 60px;
+        @media (max-width: $md2) {
+          font-weight: 700;
+          font-size: 30px;
+          line-height: 60px;
+        }
+      }
+    }
+    >div:nth-child(2) {
+      @media (max-width: $md3) {
+        flex-direction: column;
+      }
+      >div {              // блоки страницы
+        padding-top: 20px;
+        padding-bottom: 45px;
+        @media (max-width: $md3) {
+          padding-top: 8px;
+          padding-bottom: 17px;
+        }
+        &:first-child {
+          padding-top: 0;
+        }
+        @media (max-width: $md3) {
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      
+    }
+  }
+}
