@@ -1,10 +1,13 @@
 // 2-я страница - blog
 .page__blog {
-  padding: 72px 150px 53px 150px;
-  @media (max-width: $md3) {
+  padding: 75px 235px 55px 235px;
+  @media (max-width: $md2) {
     padding: 27px 20px 55px 20px;
   }
   >div:nth-child(1) { // заголовок страницы
+    @media (min-width: $md2) {
+      padding-bottom: 15px;
+    }
     @media (max-width: $md2) {
       font-size: 30px;
       line-height: 60px;

@@ -30,10 +30,9 @@
   >div div:nth-child(2) {
     padding-bottom: 31px;
   }
-  >div div:nth-child(3) {
+  >div div:nth-child(3) { // кнопака resume
     font-weight: 500;
     font-size: 20px;
-    line-height: 29.38px;
     background-color: #FF6464;
     color: #FFFFFF;
     border-radius: 2px;
@@ -229,8 +228,11 @@
             line-height: 30px;
           }
         }
-        &:nth-child(2) { // подзоголовок 1/2
+        >div:nth-child(2) { // подзоголовок 1/2
           display: block;
+          @media (max-width: $md3) {
+            padding-bottom: 10px;
+          }
           span:nth-child(1) {
             background-color: #142850;
             margin-right: 25px;
@@ -240,6 +242,9 @@
             color: #FFFFFF;
             border-radius: 16px;
             padding: 0 12px 0 10px;
+            @media (max-width: $md2) {
+              line-height: 50px;
+            }
           }
           span:nth-child(2) { // подзоголовок 2/2
             font-size: 20px;
@@ -262,7 +267,7 @@
     padding-top: 5px;
   }
   @media (max-width: $md3) {
-    padding: 0px 0 10px 0;
+    padding: 0px 0 20px 0;
   }
   img { // картинки блоков
     height: 100%;
