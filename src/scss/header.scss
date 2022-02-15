@@ -1,6 +1,8 @@
 .header { // верстка шапки
-    &__menu {
+    >div:nth-child(1) {
         display: flex;
+        margin: 0 auto;
+        max-width: $md1;
         justify-content: flex-end;
         height: 87px;
         align-items: center;

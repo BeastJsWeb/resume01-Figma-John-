@@ -38,17 +38,6 @@ body {
   justify-content: space-between;
 }
 
-.__ibg {
-  position: relative;
-  img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-  }
-}
 // оболочка //
 
 // основная сетка
@@ -86,14 +75,3 @@ body {
 @import "footer";
 // footer //
 // main (основной блок)
-
-// заголовки 2-го порядка (используется: blog)
-.title-2 {
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 44px;
-  @media (max-width: $md2) {
-    font-size: 26px;
-    line-height: 38px;
-  }
-}

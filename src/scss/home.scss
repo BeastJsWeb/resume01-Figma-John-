@@ -5,23 +5,18 @@
 // hello -  блок 1/3
 .content__hello {
   padding: 122px 150px 83px 150px;
-  @media (max-width: $md3) {
-    padding: 33px 25px 150px 25px;
-  }
   display: flex;
-  justify-content:space-between;
   gap: 20px;
-  @media (max-width: $md3) {
+  @media (max-width: $md2) {
+    padding: 33px 30px 60px 30px;
     flex-wrap: wrap-reverse;
     justify-content: center;
     text-align: center;
-    padding-left: 15px;
-    padding-right: 15px;
   }
   >div div:nth-child(1) {
     padding-top: 20px;
     padding-bottom: 24px;
-    @media (max-width: $md3) {
+    @media (max-width: $md2) {
       max-width: 230px;
       margin: 0 auto;
       padding-top: 23px;
@@ -49,7 +44,7 @@
       background-color: #000000;
       }
     }
-    @media (max-width: $md3) {
+    @media (max-width: $md2) {
       margin: 0 auto;
     }
   }
@@ -58,7 +53,7 @@
     box-shadow: -5px 13px 0 0 #EDF7FA;
     width: 243px;
     height: 243px;
-    @media(max-width: $md4) {
+    @media(max-width: $md2) {
       width: 170px;
       height: 170px;
     }
@@ -76,17 +71,17 @@
 // hello -  блок 1/3 //
 
 // recent-posts - блок 2/3
-.content { // обертка ширина 100%
+.content__recent-posts { // обертка ширина 100%
   background-color: #EDF7FA;
 }
-.content__recent-posts { // контент блок 2/3
+.wrap { // контент блок 2/3
   max-width: $md1;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   padding: 0px 150px 32px 150px;
-  min-height: 400px;
-  @media (max-width: $md3) {
+  min-height: 250px;
+  @media (max-width: $md2) {
     padding: 0px 10px 35px 10px;
   }
   >div {
@@ -109,7 +104,7 @@
         }
       }
     }
-    @media (max-width: $md4) {
+    @media (max-width: $md2) {
       justify-content: center;
       line-height: 60px;
       a {
@@ -117,9 +112,9 @@
       }
     }
   }
-  >div:nth-child(2) {
+  >div:nth-child(2) {  //обертка блоков
     gap: 20px;
-    @media (max-width: 1050px) {
+    @media (max-width: $md3) {
       flex-direction:column;
     }
     >div {
@@ -149,12 +144,13 @@
   
   &:nth-child(1) {
    padding: 30px 25px 30px 25px;
-    @media (max-width: $md4) {
+    @media (max-width: $md2) {
       padding: 15px 20px 15px 20px;
     }
   }
   div:nth-child(2) {
     display: inline-flex;
+    align-items: center;
     font-size: 18px;
     line-height: 26px;
     padding: 20px 0 20px 0;
@@ -174,8 +170,8 @@
   max-width: $md1;
   margin: 0 auto;
   padding: 0px 150px 83px 150px;
-  @media (max-width: $md3) {
-    padding: 0 0 150px 0;
+  @media (max-width: $md2) {
+    padding: 0 20px 140px 20px;
   }
   >div:nth-child(1) {
     font-size: 22px;

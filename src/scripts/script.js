@@ -29,4 +29,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//@@include('alert.js')

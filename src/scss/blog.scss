@@ -46,6 +46,15 @@
         }
       }
     }
-    
+  }
+}
+// заголовки 2-го порядка
+.title-2 {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 44px;
+  @media (max-width: $md2) {
+    font-size: 26px;
+    line-height: 38px;
   }
 }
