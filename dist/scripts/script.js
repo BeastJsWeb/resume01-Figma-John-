@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // header
   // переключатель меню бургер
-  document.getElementById("icon-menu").addEventListener("click", (e) => {
-    document.getElementById("menu__body").classList.toggle("--active");
-    document.getElementById('icon-menu').classList.toggle("--active");
+  document.getElementById("js-icon-menu").addEventListener("click", (e) => {
+    document.getElementById("js-menu__body").classList.toggle("--active");
+    document.getElementById('js-icon-menu').classList.toggle("--active");
   });
 });
 

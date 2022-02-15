@@ -14,7 +14,7 @@
     }
 }   
 
-.menu {
+.js-menu {
     &__body { // развернутое меню на мобилке
         @media (max-width: $md3) {
             transform: translate(0px, -100%);
@@ -29,7 +29,16 @@
             overflow: auto;
             background-color: rgb(255, 255, 255, 0.95); // 0.8 - прозрачность 
             li {
-                padding: 10%;
+                @media (max-width: $md2) {
+                    padding: 10%;
+                    text-align: center;
+                }
+                >a {
+                    @media (max-width: $md2) {
+                        display: inline-flex;
+                        line-height: 40px;
+                    }
+                }
             }  // JS переключатель меню
             &.--active {
                 transform: translate(0px, 0%);
@@ -70,7 +79,7 @@
 }
 
 // меню бургер
-.icon-menu {
+.js-icon-menu {
     display: none;
     @media (max-width: $md3) {
             z-index: 5;
