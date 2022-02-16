@@ -243,7 +243,10 @@ body._lock {
   padding-bottom: 31px;
 }
 
-.content__hello > div div:nth-child(3) {
+.content__hello > div a:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-weight: 500;
   font-size: 20px;
   background-color: #FF6464;
@@ -393,6 +396,9 @@ body._lock {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 30px;
   font-weight: 700;
   line-height: 44px;
@@ -619,11 +625,7 @@ body._lock {
     color: #FF6464;
   }
 
-  .content__hello > div div:nth-child(3) {
-    cursor: pointer;
-  }
-
-  .content__hello > div div:nth-child(3):hover {
+  .content__hello > div a:nth-child(3):hover {
     background-color: #000000;
   }
 
@@ -678,7 +680,7 @@ body._lock {
     padding-top: 23px;
   }
 
-  .content__hello > div div:nth-child(3) {
+  .content__hello > div a:nth-child(3) {
     margin: 0 auto;
   }
 
