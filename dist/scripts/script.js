@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // header
   // переключатель меню бургер
-  document.getElementById("js-icon-menu").addEventListener("click", (e) => {
+  document.getElementById("js-icon-menu").addEventListener("click", () => {
     document.getElementById("js-menu__body").classList.toggle("--active");
     document.getElementById('js-icon-menu').classList.toggle("--active");
   });
